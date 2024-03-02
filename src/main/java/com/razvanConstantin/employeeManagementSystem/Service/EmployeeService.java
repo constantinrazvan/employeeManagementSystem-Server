@@ -55,6 +55,6 @@ public class EmployeeService {
 
 
     public List<Employee> getEmployeesByName(String name) {
-        return employeeRepository.getEmployeesByName(name);
+        return employeeRepository.getEmployeesByName(name).orElse(null);
     }
 }
